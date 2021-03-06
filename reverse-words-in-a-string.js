@@ -29,8 +29,6 @@ var reverseWords = function(s) {
     while (words.length) 
         reversed.push( words.pop() );
 
-    console.log("reversed %o", reversed);
-
     return reversed.join(' ');
 };
 

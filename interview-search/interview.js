@@ -64,10 +64,29 @@ const argvToArgs = args => {
  * @returns {array}
  */
 const argsToPairs = args => {
+    const pairs = [];
+
+    /*
     if (args.length % 2 !== 0)
         args.push(null);
 
     return _.chunk(args, 2);
+    */
+    if (!args || args.length === 0)
+        return pairs;
+
+    if (args.length % 2 !== 0)
+        args.push(null); // ensure even pairs
+
+    let key, val = null;
+
+    for (let x = 0; x < args.length; x += 2) {
+        key = args[x];     // state
+        val = args[x + 1]; // illinois
+        pairs.push(new Criteria(key, val));
+    }
+
+    return pairs;
 };
 
 const multi = args => {

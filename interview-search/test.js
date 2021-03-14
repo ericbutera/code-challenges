@@ -10,23 +10,32 @@ const { search, argsToPairs, multi, Criteria } = require('./interview');
 
 test('argsToSearch city Chicago', t => {
     let pairs = argsToPairs(['city', 'Chicago']);
-    t.deepEqual(pairs, [['city', 'Chicago']])
+    let criteria = new Criteria('city', 'Chicago');
+    t.deepEqual(pairs, [criteria]);
 });
 
 test('argsToSearch city Chicago landmark Tower', t => {
     let pairs = argsToPairs(['city', 'Chicago', 'landmark', 'Tower']);
-    t.deepEqual(pairs, [['city', 'Chicago'], ['landmark', 'Tower']])
+    let cri1 = new Criteria('city', 'Chicago');
+    let cri2 = new Criteria('landmark', 'Tower');
+    t.deepEqual(pairs, [cri1, cri2]);
 });
 
 test('argsToSearch _any Tower', t => {
     let pairs = argsToPairs(['_any', 'Tower']);
-    t.deepEqual(pairs, [['_any', 'Tower']])
+    let criteria = new Criteria('_any', 'Tower');
+    t.deepEqual(pairs, [criteria]);
 });
 
 test('argsToSearch one param only fails', t => {
     let pairs = argsToPairs(['any']);
-    t.deepEqual(pairs, [['any', null]]);
+    let criteria = new Criteria('any', null);
+    t.deepEqual(pairs, [criteria]);
 })
+
+test('argsToSearch no params returns empty collection', t => {
+    t.deepEqual(argsToPairs(), []);
+});
 
 test('search city Chicago', t => {
     let criteria = new Criteria('city', 'Chicago');

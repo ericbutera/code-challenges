@@ -1,5 +1,7 @@
 require './code'
 
+# https://www.hackerrank.com/challenges/simple-array-sum/problem
+
 RSpec.describe 'simple array sum' do
     it 'sums 6 when given 1 2 3' do
       output = array_sum_as_string([1,2,3])

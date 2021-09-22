@@ -1,3 +1,5 @@
+// https://www.hackerrank.com/challenges/birthday-cake-candles/problem
+
 'use strict';
 const assert = require('assert');
 const { birthdayCakeCandles } = require('./lib');

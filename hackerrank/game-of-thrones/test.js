@@ -1,4 +1,7 @@
 'use strict';
+
+// https://www.hackerrank.com/challenges/game-of-thrones/problem
+
 const assert = require('assert');
 const { isPalindrome, LABELS } = require('./palindrome');
 

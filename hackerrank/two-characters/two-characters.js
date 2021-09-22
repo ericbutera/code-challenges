@@ -1,4 +1,7 @@
 'use strict';
+
+// https://www.hackerrank.com/challenges/two-characters/problem
+
 const assert = require('assert');
 
 /**

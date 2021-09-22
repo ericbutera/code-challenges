@@ -1,6 +1,8 @@
 'use strict';
 const assert = require('assert');
 
+// https://www.hackerrank.com/challenges/flatland-space-stations/problem
+
 /*
  * Scenerio:
  * cities = 5

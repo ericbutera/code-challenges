@@ -1,4 +1,7 @@
 'use strict';
+
+// https://www.hackerrank.com/challenges/mini-max-sum/problem
+
 const assert = require('assert');
 const { miniMaxSum } = require('./lib');
 

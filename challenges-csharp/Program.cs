@@ -4,9 +4,9 @@ namespace app
 {
     class Program
     {
-        static void Main(string[] args)
+        static void xMain(string[] args)
         {
-            Challenges.BreakingBestWorstRecords.Result.Test();
+            //Challenges.BreakingBestWorstRecords.Result.Test();
         }
     }
 }

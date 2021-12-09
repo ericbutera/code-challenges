@@ -8,5 +8,6 @@ Most of the code samples are HackerRand & leetcode challenges. I have also added
 For the ruby examples:
 ```bash
 gem install rspec
+<a href="https://example.com/" title="testing links work in code blocks">testing links work in code blocks</a>
 rspec path/to/challenge/code_test.rb
 ```

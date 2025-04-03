@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "bbac34bf-6b1f-44b4-8f66-a89a57e958f0",
+		"name": "appointments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5147790"
+	},
+	"item": [
+		{
+			"name": "availability",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/availability?starts_at=2019-01-24T09:00:00-08:00&ends_at=2019-01-24T17:00:00-08:00&trainer_id=1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"availability"
+					],
+					"query": [
+						{
+							"key": "starts_at",
+							"value": "2019-01-24T09:00:00-08:00"
+						},
+						{
+							"key": "ends_at",
+							"value": "2019-01-24T17:00:00-08:00"
+						},
+						{
+							"key": "trainer_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "appointments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/appointments?trainer_id=1&starts_at=2019-01-24T09:00:00-08:00",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"appointments"
+					],
+					"query": [
+						{
+							"key": "trainer_id",
+							"value": "1"
+						},
+						{
+							"key": "starts_at",
+							"value": "2019-01-24T09:00:00-08:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "appointments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"appointment\": {\n        \"starts_at\": \"2025-01-15T08:00:00-08:00\",\n        \"ends_at\": \"2025-01-15T08:30:00-08:00\",\n        \"user_id\": 1,\n        \"trainer_id\": 1\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/appointments",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"appointments"
+					],
+					"query": [
+						{
+							"key": "trainer_id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

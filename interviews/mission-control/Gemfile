@@ -1,0 +1,22 @@
+source "https://rubygems.org"
+
+group :development, :test do
+  gem "lefthook", require: false
+  gem "mdl"
+  gem "rubocop"
+  gem "rubocop-rake"
+  gem "simplecov"
+end
+
+group :test do
+  gem "minitest"
+  gem "minitest-reporters"
+end
+
+gem "actionview"
+gem "activesupport"
+gem "cli-ui"
+gem "reline"
+gem "require_all"
+gem "semantic_logger"
+gem "state_machines"

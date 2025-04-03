@@ -1,0 +1,233 @@
+{
+	"info": {
+		"name": "device-readings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "readings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/devices/{{id}}/readings",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"devices",
+						"{{id}}",
+						"readings"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "readings",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/devices/{{id}}/readings",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"devices",
+								"{{id}}",
+								"readings"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "120"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"readings\": [\n        {\n            \"timestamp\": \"2024-01-01T17:00:00+01:00\",\n            \"count\": 24\n        },\n        {\n            \"timestamp\": \"2021-09-01T17:00:00+01:00\",\n            \"count\": 17\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "readings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"36d5658a-6908-479e-887e-a949ec199272\",\n    \"readings\": [\n        {\"timestamp\":\"2021-09-01T17:00:00+01:00\", \"count\":17},\n        {\"timestamp\":\"2024-01-01T17:00:00+01:00\", \"count\":24},\n        {\"timestamp\":\"2024-01-01T17:00:00+01:00\", \"count\":24}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/devices/{{id}}/readings",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"devices",
+						"{{id}}",
+						"readings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "latest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/devices/{{id}}/readings/latest",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"devices",
+						"{{id}}",
+						"readings",
+						"latest"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "latest",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/devices/{{id}}/readings/latest",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"devices",
+								"{{id}}",
+								"readings",
+								"latest"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"latest_timestamp\": \"2024-01-01T17:00:00+01:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/devices/{{id}}/readings/count",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"devices",
+						"{{id}}",
+						"readings",
+						"count"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "count",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/devices/{{id}}/readings/count",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"devices",
+								"{{id}}",
+								"readings",
+								"count"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "22"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"cumulative_count\": 2\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "36d5658a-6908-479e-887e-a949ec199272",
+			"type": "default"
+		},
+		{
+			"key": "url",
+			"value": "http://localhost:8080/v1",
+			"type": "string"
+		}
+	]
+}

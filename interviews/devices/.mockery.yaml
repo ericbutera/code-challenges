@@ -1,0 +1,12 @@
+with-expecter: true
+inpackage: True
+
+filename: "mock_{{.InterfaceName | lower }}.go"
+dir: "{{.InterfaceDir}}"
+mockname: "Mock{{.InterfaceName}}"
+outpkg: "{{.PackageName}}"
+
+packages:
+  github.com/ericbutera/project/internal/db:
+    interfaces:
+      DB:
